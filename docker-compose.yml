@@ -74,7 +74,7 @@ services:
       SERVER_DB_NAME: ${AGENT_DB_NAME:-indexer-agent}
       VIRTUAL_HOST: ${INDEX_HOST}
       VIRTUAL_PORT: 7600
-      LETSENCRYPT_HOST: ${INDEX_HOST}
+      #LETSENCRYPT_HOST: ${INDEX_HOST}
     expose:
       - 7600
       - 7300
@@ -221,7 +221,7 @@ services:
       GRAPH_KILL_IF_UNRESPONSIVE: "true"
       VIRTUAL_HOST: ${QUERY_HOST}
       VIRTUAL_PORT: 8000
-      LETSENCRYPT_HOST: ${QUERY_HOST}
+      #LETSENCRYPT_HOST: ${QUERY_HOST}
       GRAPH_LOG_QUERY_TIMING: ${GRAPH_LOG_QUERY_TIMING:-gql}
     restart: unless-stopped
     logging:
@@ -467,7 +467,7 @@ services:
       - postgres_db=${GRAPH_NODE_DB_NAME:-graph-node}
       - VIRTUAL_HOST=${GRAFANA_HOST}
       - VIRTUAL_PORT=3000
-      - LETSENCRYPT_HOST=${GRAFANA_HOST}
+      - #LETSENCRYPT_HOST=${GRAFANA_HOST}
     restart: unless-stopped
     expose:
       - 3000
