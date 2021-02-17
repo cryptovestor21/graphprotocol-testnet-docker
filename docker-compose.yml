@@ -467,7 +467,6 @@ services:
       - postgres_db=${GRAPH_NODE_DB_NAME:-graph-node}
       - VIRTUAL_HOST=${GRAFANA_HOST}
       - VIRTUAL_PORT=3000
-      - #LETSENCRYPT_HOST=${GRAFANA_HOST}
     restart: unless-stopped
     expose:
       - 3000
