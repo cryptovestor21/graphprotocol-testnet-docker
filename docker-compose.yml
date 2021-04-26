@@ -73,7 +73,6 @@ services:
 
   indexer-service:
     image: ghcr.io/graphprotocol/indexer-service:v0.13.0
-    container_name: indexer-service
     depends_on:
       - index-node
       - query-node
